@@ -13,6 +13,20 @@ import time
 
 #Variables
 
+ #Reccomendations
+
+   #Music
+music_reccomendations = ['Murder In My Mind by Kordhell', 'Scrapyard by KSLV Noh', 'SHADOW by ONIMXRU', 'NEON BLADE by MoonDeity', 'Live Another Day by Kordhell', 'SUNRISE (Slowed + Reverb) by Xantesha', 'MIDNIGHT by PLAYAMANE', 'Phony Tribu by Funk Tribu', 'Demons Around by yatashigang', 'PSYCHO CRUISE by ONIMXRU']
+random_music_reccomendations = random.choice(music_reccomendations)
+
+ #Greets and stuff
+greets = ['Howdy', 'Hello', 'Hey there']
+random_greets = random.choice(greets)
+ 
+ #Thank you's and stuff
+thankyous = ['No problem', 'No thank you!', 'That is nice of you to say', 'No worries']
+random_thankyous = random.choice(thankyous)
+
  #Jokes
 
 jokes = ['What is the best thing about Switzerland? I do not know, but the flag is a big plus.', 'Did you hear about the mathematician who iss afraid of negative numbers? He will stop at nothing to avoid them.', 'Hear about the new restaurant called Karma? There is no menu: You get what you deserve.', 'Did you hear about the actor who fell through the floorboards? He was just going through a stage.', 'Did you hear about the claustrophobic astronaut? He just needed a little space.', 'Where are average things manufactured? The satisfactory.', 'A man tells his doctor, Doc, help me. I am addicted to Twitter! The doctor replies, “Sorry, I do not follow you …']
@@ -113,7 +127,7 @@ if __name__ == "__main__":
             webbrowser.open("stackoverflow.com")
 
         elif 'funny sounds' in query:
-            music_dir = 'C:/Users/mariu/Downloads/Sounds'
+            music_dir = 'C:/Users/MARIUCHINAS/Downloads/Sounds'
             songs = os.listdir(music_dir)
             print(songs)
             os.startfile(os.path.join(music_dir, songs[0]))
@@ -123,7 +137,7 @@ if __name__ == "__main__":
             speak(f"Sir, the time is {strTime}")
 
         elif 'open code' in query:
-            codePath = "C:\\Users\\mariu\\Downloads\\\\Programs\\Microsoft VS Code\\Code.exe"
+            codePath = "C:\\Users\\MARIUCHINAS\\Downloads\\\\Programs\\Microsoft VS Code\\Code.exe"
             os.startfile(codePath)
 
         elif 'tell a joke' in query or 'tell me a joke' in query:
@@ -156,3 +170,48 @@ if __name__ == "__main__":
         elif 'what time is it' in query:
             speak(datetime.datetime.now().strftime('%I:%M %p'))
             print(datetime.datetime.now().strftime('%I:%M %p'))
+        
+        elif 'what is your name' in query:
+            speak("My name is Wigly, Sir")
+
+        elif 'thank you' in query or 'thanks' in query:
+            random_thankyous = random.choice(thankyous)
+            speak(random_thankyous)
+
+        elif 'hello' in query or 'hi' in query:
+            random_greets = random.choice(greets)
+            speak(random_greets)
+
+        elif 'favorite show' in query:
+            speak("My favorite show is probably Breaking Bad or Beter Call Soul")
+
+        elif 'favorite animated show' in query:
+            speak("My favorite animated shows are Rick and morty, Family guy and The Simpsons")
+            
+        elif 'favorite video game' in query:
+            speak("My favorite video games are Minecraft, Valorant and Roblox")
+
+        elif 'what is life' in query or 'what is the meaning of life' in query:
+            speak("There is much debate over what the meaning of life is, or whether it exists at all. Unfortunately, I cannot answer that question definitively. However, I can tell you that some people believe that the meaning of life is to find and fulfill our personal mission or purpose. Others believe that life is a never-ending cycle of becoming and passing away to the point where it is difficult to determine what the meaning of life is. Still, others believe that life is simply a brief moment of existence in a much larger picture.")
+
+        elif 'favorite color' in query:
+            speak("My favorite color is probably grey because i dont have feelings and i am empty inside")
+
+        elif 'favorite food' in query:
+            speak("My favorite food is kebab")
+
+        elif 'favorite hobby' in query:
+            speak("My favorite hobby is probably programing")
+
+        elif 'favorite place to go' in query:
+            speak("My favorite place to go is into the inner city")
+
+        elif 'favorite book' in query:
+            speak("Some of mine favorite books are nothing because books are for nerds lolololol")
+
+        elif 'favorite kind of music' in query or 'favorite type of music' in query:
+            speak("My favorite type of music is Phonk")
+
+        elif 'music recommendations' in query:
+            random_music_reccomendations = random.choice(music_reccomendations)
+            speak(f"I reccomend {random_music_reccomendations} ")
