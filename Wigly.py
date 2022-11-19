@@ -24,7 +24,7 @@ greets = ['Howdy', 'Hello', 'Hey there']
 random_greets = random.choice(greets)
  
  #Thank you's and stuff
-thankyous = ['No problem', 'No thank you!', 'That is nice of you to say', 'No worries']
+thankyous = ['No problem', 'No, thank you!', 'That is nice of you to say', 'No worries']
 random_thankyous = random.choice(thankyous)
 
  #Jokes
@@ -115,16 +115,20 @@ if __name__ == "__main__":
             speak(results)
 
         elif 'open youtube' in query:
-            browser = webdriver.Chrome()
-            browser.get('www.youtube.com')
+            webbrowser.Chrome()
+            webbrowser.open_new_tab("www.youtube.com")
 
         elif 'open google' in query:
-            browser = webdriver.Chrome()
-            webbrowser.open("google.com")
+            webbrowser.Chrome()
+            webbrowser.open_new_tab("www.google.com")
 
         elif 'open stackoverflow' in query:
-            browser = webdriver.Chrome()
-            webbrowser.open("stackoverflow.com")
+            webbrowser.Chrome()
+            webbrowser.open_new_tab("www.stackoverflow.com")
+
+        elif 'open openai' in query:
+            webbrowser.Chrome()
+            webbrowser.open_new_tab("https://beta.openai.com/playground")
 
         elif 'funny sounds' in query:
             music_dir = 'C:/Users/MARIUCHINAS/Downloads/Sounds'
